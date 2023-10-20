@@ -6,9 +6,11 @@ candidato1 = "e0_t6_p10_s20"
 _format = "e{}_t{}_p{}_x{}"
 # formato padrão em dicionário
 _form_dict = {"e": 0, "t": 0, "p": 0, "s": 0}
+# lista de candidatos
+candidatos = dict()
 
 print(_format)
-print( candidato1.split(sep="_") )
+print(candidato1.split(sep="_"))
 
 def get_crude(arg:str):
 	__doc__ = "Retorna as notas em formato de dicionário.\
@@ -16,17 +18,27 @@ def get_crude(arg:str):
 \nonde cada X é substituído por um número correspondente\
 \nà nota em cada avaliação indicada pela letra"
 	return {element[:1]: element[1:] for element in arg.split(sep="_")}
-	#return [element[1:] for element in arg.split(sep="_")]
 
 
 def get_formated(arg:list):
 	__doc__ = "Retorna as notas convertidas no formato de string\
-\neX_tX_pX_sX onde "
+\neX_tX_pX_sX onde\
+\ne = entrevista\
+\nt = teste teórico\
+\np = teste prático\
+\ns = soft skills\
+\nDeve receber um dicionário no formato (letra: nota_correspondente)"
 	return _format.format(arg["e"], arg["t"], arg["p"], arg["s"])
 
 
-def 
+def filtrar_por_notas(etpx:list, vetor):
+	aprovados = []
+	for candidato, notas in vetor.items:
+		v = get_crude(notas)
+		if not (etpx) > (v['e'], v['p'], v['t'], v['x']):
+			aprovados.append( (candidato, notas) )
+	return aprovados
 
 
-print( get_crude(candidato1) )
-print( get_formated( get_crude(candidato1) ) )
+print(get_crude(candidato1))
+print(get_formated(get_crude(candidato1)))
