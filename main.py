@@ -9,21 +9,35 @@ _templateDict = {"e": 0, "t": 0, "p": 0, "s": 0}
 # lista de candidatos
 candidatos = dict()
 
-def get_crude(arg:str):
+def str_to_dict(arg:str):
 	"""\
 Retorna as notas em formato de dicionário.
 Forneça uma string no formato "eX_tX_pX_sX"
 onde cada X é substituído por um número correspondente
-à nota em cada avaliação indicada pela letra"""
-	return {element[:1]: int(element[1:]) for element in arg.split(sep="_")}
+à nota em cada avaliação indicada pela letra anterior"""
+	arg = arg.split(sep="_")
+	# return {element[:1]: int(element[1:]) for element in arg.split(sep="_")}
 
 
-def get_dict(arg:list|tuple):
+def list_to_dict(notaEntrevista,notaTesteTeorico,notaTestePratico,notaSoftSkills):
+	"""\
+Retorna um dicionário no formato
+letra: nota_correspondente
+onde
+    'letra' é uma string
+    'nota_correspondente' é um inteiro
+cada letra corresponde a uma nota
+    e = entrevista
+    t = teste teórico
+    p = teste prático
+    s = soft skills
+Forneça as notas nesta ordem"""
 	a = [i for i in'etps']
-	return {key:arg[a.index(key)] for key in a}
+	notas = [notaEntrevista, notaTesteTeorico, notaTestePratico, notaSoftSkills]
+	return {key:notas[a.index(key)] for key in a}
 
 
-def get_formated(arg:dict):
+def dict_to_string(arg:dict):
 	"""\
 Retorna uma string no formato
 'eX_tX_pX_sX' onde cada 'X' é a nota obtida na avaliação
