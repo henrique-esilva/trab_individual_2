@@ -16,10 +16,16 @@ Forneça uma string no formato "eX_tX_pX_sX"
 onde cada X é substituído por um número correspondente
 à nota em cada avaliação indicada pela letra anterior"""
 	arg = arg.split(sep="_")
+	result = _templateDict
+	for i in _templateDict:
+		for j in arg:
+			if j[:1] == i:
+				result[i] = int(j[1:])
+	return result
 	# return {element[:1]: int(element[1:]) for element in arg.split(sep="_")}
 
 
-def list_to_dict(notaEntrevista,notaTesteTeorico,notaTestePratico,notaSoftSkills):
+def args_to_dict(notaEntrevista,notaTesteTeorico,notaTestePratico,notaSoftSkills):
 	"""\
 Retorna um dicionário no formato
 letra: nota_correspondente
@@ -37,7 +43,7 @@ Forneça as notas nesta ordem"""
 	return {key:notas[a.index(key)] for key in a}
 
 
-def dict_to_string(arg:dict):
+def dict_to_str(arg:dict):
 	"""\
 Retorna uma string no formato
 'eX_tX_pX_sX' onde cada 'X' é a nota obtida na avaliação
@@ -56,7 +62,7 @@ na ordem [e, t, p, s]"""
 	return _templateStr.format(arg["e"], arg["t"], arg["p"], arg["s"])
 
 
-def filtrar_por_notas(etps:list|tuple, vetor:dict):
+def filtrar_por_notas(etps:list|tuple, vetor:dict=candidatos):
 	"""\
 Forneça uma lista ou tupla de quatro números inteiros
 e um dicionário no formato
@@ -71,7 +77,7 @@ que possuírem notas todas de valor igual ou superior ao correspondente na
 lista ou tupla fornecida."""
 	aprovados = {}
 	for candidato, notas in vetor.items():
-		v = get_crude(notas) # try 'with get_crude(notas) as v: [...]' or something like
+		v = str_to_dict(notas)
 		if not tuple(etps) > (v['e'], v['p'], v['t'], v['s']):
 			aprovados[candidato] = notas
 	return aprovados
