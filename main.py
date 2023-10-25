@@ -7,7 +7,13 @@ _templateStr = "e{}_t{}_p{}_s{}"
 # formato padrão em dicionário
 _templateDict = {"e": 0, "t": 0, "p": 0, "s": 0}
 # lista de candidatos
-candidatos = dict()
+candidatos = {
+	'candidato 1': 'e5_t10_p8_s8'
+	'candidato 2': 'e10_t7_p7_s8'
+	'candidato 3': 'e8_t5_p4_s9'
+	'candidato 4': 'e2_t2_p2_s1'
+	'candidato 5': 'e10_t10_p8_s9'
+}
 
 def str_to_dict(arg:str):
 	"""\
