@@ -8,11 +8,11 @@ _templateStr = "e{}_t{}_p{}_s{}"
 _templateDict = {"e": 0, "t": 0, "p": 0, "s": 0}
 # lista de candidatos
 candidatos = {
-	'candidato 1': 'e5_t10_p8_s8'
-	'candidato 2': 'e10_t7_p7_s8'
-	'candidato 3': 'e8_t5_p4_s9'
-	'candidato 4': 'e2_t2_p2_s1'
-	'candidato 5': 'e10_t10_p8_s9'
+	'candidato 1': 'e5_t10_p8_s8',
+	'candidato 2': 'e10_t7_p7_s8',
+	'candidato 3': 'e8_t5_p4_s9',
+	'candidato 4': 'e2_t2_p2_s1',
+	'candidato 5': 'e10_t10_p8_s9',
 }
 
 def str_to_dict(arg:str):
@@ -84,8 +84,15 @@ lista ou tupla fornecida."""
 	aprovados = {}
 	for candidato, notas in vetor.items():
 		v = str_to_dict(notas)
-		if not tuple(etps) > (v['e'], v['p'], v['t'], v['s']):
+		print(etps, v.values())
+		if (
+      		tuple(etps)[0] <= v['e'] and\
+    		tuple(etps)[1] <= v['p'] and\
+      		tuple(etps)[2] <= v['t'] and\
+            tuple(etps)[3] <= v['s']
+        ):
 			aprovados[candidato] = notas
 	return aprovados
 
 
+print(filtrar_por_notas([4,4,8,8]))
