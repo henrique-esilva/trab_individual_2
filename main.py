@@ -87,12 +87,20 @@ lista ou tupla fornecida."""
 		print(etps, v.values())
 		if (
       		tuple(etps)[0] <= v['e'] and\
-    		tuple(etps)[1] <= v['p'] and\
-      		tuple(etps)[2] <= v['t'] and\
+    		tuple(etps)[1] <= v['t'] and\
+      		tuple(etps)[2] <= v['p'] and\
             tuple(etps)[3] <= v['s']
         ):
 			aprovados[candidato] = notas
 	return aprovados
 
 
+# aqui é feita uma filtragem de teste
+# com as notas de corte
+# entrevista 4
+# teste teórico 4
+# teste prático 8
+# soft skills 8
+# os resultados serão exibidos no terminal
 print(filtrar_por_notas([4,4,8,8]))
+input('pressione ENTER para encerrar')
