@@ -95,12 +95,13 @@ lista ou tupla fornecida."""
 	return aprovados
 
 
-# aqui é feita uma filtragem de teste
-# com as notas de corte
-# entrevista 4
-# teste teórico 4
-# teste prático 8
-# soft skills 8
-# os resultados serão exibidos no terminal
+# Aqui é feita uma filtragem de teste
+# com as seguintes notas de corte
+# entrevista    - 4
+# teste teórico - 4
+# teste prático - 8
+# soft skills   - 8
+# a função filtrar_por_notas retornará um dicionário contendo todos os candidatos cujas notas tenham o valor igual ou superior a estes.
+# Os resultados serão exibidos no terminal
 print(filtrar_por_notas([4,4,8,8]))
 input('pressione ENTER para encerrar')
