@@ -77,7 +77,7 @@ onde
     'candidato' pode ser qualquer tipo e
     'notas' precisa ser uma string no formato eX_tX_pX_sX
     onde cada 'X' é a nota obtida na avaliação indicada pela letra precedente
-    esta podendo ser 'e', 'p', 't' ou 's'
+    esta podendo ser 'e', 't', 'p' ou 's'
 Retorna um dicionário contendo apenas os elementos do dicionario fornecido
 que possuírem notas todas de valor igual ou superior ao correspondente na
 lista ou tupla fornecida."""
