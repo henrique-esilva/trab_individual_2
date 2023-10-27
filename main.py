@@ -84,13 +84,12 @@ lista ou tupla fornecida."""
 	aprovados = {}
 	for candidato, notas in vetor.items():
 		v = str_to_dict(notas)
-		print(etps, v.values())
 		if (
-      		tuple(etps)[0] <= v['e'] and\
-    		tuple(etps)[1] <= v['t'] and\
-      		tuple(etps)[2] <= v['p'] and\
-            tuple(etps)[3] <= v['s']
-        ):
+			tuple(etps)[0] <= v['e'] and\
+			tuple(etps)[1] <= v['t'] and\
+			tuple(etps)[2] <= v['p'] and\
+			tuple(etps)[3] <= v['s']
+		):
 			aprovados[candidato] = notas
 	return aprovados
 
