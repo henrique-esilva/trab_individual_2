@@ -90,10 +90,10 @@ from main import *
 Desse jeito, as variáveis serão importadas diretamente. Assim, em vez de main.nomeDaFunção, use apenas nomeDaFunção no restante do código.
 
 Em main.py são definidas algumas funções.
-str_to_dict
-args_to_dict
-dict_to_str
-filtrar_por_notas
+* str_to_dict;
+* args_to_dict;
+* dict_to_str;
+* filtrar_por_notas;
 
 Para ver as documentações das funções, use a função `help()` na CLI do Python ou num arquivo depois de importar o `main.py`. Exemplo:
 ```
