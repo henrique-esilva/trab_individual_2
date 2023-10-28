@@ -20,6 +20,8 @@ participante_3 : notas_do_p3
 ...
 ```
 
+### Padrão das notas
+
 As notas dos participantes estarão em uma string de texto no formato eX_tX_pX_sX, onde cada letra 'X' é substituída por um número inteiro correspondente à nota na avaliação indicada pela letra precedente. Abaixo uma legenda das avaliações.
 
 * e - entrevista;
@@ -110,16 +112,35 @@ str_to_dict(arg: str)
     à nota em cada avaliação indicada pela letra anterior
 ```
 
-## ⚙️ Executando os testes
+## Usando na prática
 
-Explicar como executar os testes automatizados para este sistema.
+Para filtrar um conjunto de candidatos, armazene os canidatos em um dicionário. Este dicionário deve estar no formato {candidato: notas}, onde 'candidato' é um identificador qualquer, podendo ser uma string de texto, um inteiro, desde que não hajam identificadores duplicados. 'notas' deve ser uma string no formato padrão citado anteriormente [aqui](/henrique-esilva/trab_individual_2/edit/main/README.md#padrão-das-notas).
+Use a função filtrar_por_notas() que está no módulo `main.py` fornecendo como argumentos:
+* uma lista ou tupla contendo as notas de corte; e
+* o dicionário onde estão armazenados os candidatos e suas notas.
 
-### ⌨️ E testes de estilo de codificação
+Observe que:
+* As notas devem estar numa TUPLA ou LISTA
+* Elas devem ser apenas quatro números inteiros
+* Usar números de ponto flutuante não resultará em erro, mas algmas partes do módulo transformam as notas em inteiros, fazendo com que a parte decimal se perca
+* As notas devem estar na seguinte ordem: (entrevista, teste teórico, teste prático, soft skills) é pela ordem que a função identificará as notas
+* Foneça um dicionário com as notas formatadas. Para formatar notas, use as funções `dict_to_str` e `args_to_dict`
+* Ao não fornecer um dicionário, será usado o dicionário de teste definido no módulo `main.py`
 
-Explique que eles verificam esses testes e porquê.
+A função retornará um dicionário {candidato: notas} com todos os candidatos no dicionário fornecido cujas notas forem iguais ou maiores que as notas de corte correspondentes.
 
+### Exemplo
 ```
-Dar exemplos
+meus_candidatos = {
+    'helena': dict_to_str(args_to_dict(10,10,10,10)),
+    'ramon': dict_to_str(args_to_dict(5,10,10,10)),
+    'joseilson': dict_to_str(args_to_dict(5,5,10,10))
+}
+filtrar_por_notas([5, 10, 10, 10], meus_candidatos)
+```
+Saída:
+```
+{'helena': 'e10_t10_p10_s10', 'ramon': 'e5_t10_p10_s10'}
 ```
 
 ## 🛠️ Construído com
@@ -129,7 +150,6 @@ Dar exemplos
 ## ✒️ Autores
 
 * **henrique-esilva** - *Trabalho Inicial* - [henrique-esilva](https://github.com/henrique-esilva)
-* **Fulano De Tal** - *Documentação* - [fulanodetal](https://github.com/linkParaPerfil)
 
 ## 📄 Licença
 
@@ -137,9 +157,14 @@ Este projeto está sob a licença (sua licença) - veja o arquivo [LICENSE.md](h
 
 ## 🎁 Meus agradecimentos a:
 
+Meus colegas do curso:
 * Drielli, que me ensinou a usar o codespace do GitHub
 * Isabele e Bea, pela ideia de buscar um template para o README
+Meus professores:
+* Douglas, sempre muito solícito
+* Diogo Guimarães, uma rocha de paciência e saber, mestre e amigo
+E também a:
 * A comunidade Python, pelo conteúdo e ferramentas grátis
-
+* A equipe da Resília e do Senac pela oportunidade de estudar Análise de Dados <3
 ---
-⌨️ com ❤️ por [Armstrong Lohãns](https://gist.github.com/lohhans) 😊
+⌨️ Este MarkDown foi feito a partir de um template de [Armstrong Lohãns](https://gist.github.com/lohhans) 😊 muito obrigado, Armstrong =^-^=
