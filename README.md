@@ -90,19 +90,14 @@ from main import *
 Desse jeito, as variáveis serão importadas diretamente. Assim, em vez de main.nomeDaFunção, use apenas nomeDaFunção no restante do código.
 
 Em main.py são definidas algumas funções.
-* str_to_dict;
-* args_to_dict;
-* dict_to_str;
-* filtrar_por_notas;
+* str_to_dict
+* args_to_dict
+* dict_to_str
+* filtrar_por_notas
 
-Para ver as documentações das funções, use a função `help()` na CLI do Python ou num arquivo depois de importar o `main.py`. Exemplo:
+Para ver as documentações das funções, use a função `help()` na CLI do Python ou num arquivo depois de importar o `main.py`. Exemplo na CLI Python:
 ```
 >>> from main import *
-[4, 4, 8, 8] dict_values([5, 10, 8, 8])
-[4, 4, 8, 8] dict_values([10, 7, 7, 8])
-[4, 4, 8, 8] dict_values([8, 5, 4, 9])
-[4, 4, 8, 8] dict_values([2, 2, 2, 1])
-[4, 4, 8, 8] dict_values([10, 10, 8, 9])
 {'candidato 1': 'e5_t10_p8_s8', 'candidato 5': 'e10_t10_p8_s9'}
 pressione ENTER para encerrar
 >>> help(str_to_dict)
@@ -119,14 +114,6 @@ str_to_dict(arg: str)
 
 Explicar como executar os testes automatizados para este sistema.
 
-### 🔩 Analise os testes de ponta a ponta
-
-Explique que eles verificam esses testes e porquê.
-
-```
-Dar exemplos
-```
-
 ### ⌨️ E testes de estilo de codificação
 
 Explique que eles verificam esses testes e porquê.
@@ -137,18 +124,9 @@ Dar exemplos
 
 ## 🛠️ Construído com
 
-Mencione as ferramentas que você usou para criar seu projeto
-
 * [Python](https://www.python.org/) - Linguagem de programação utilizada
 
-## 🖇️ Colaborando
-
-Por favor, leia o [COLABORACAO.md](https://gist.github.com/usuario/linkParaInfoSobreContribuicoes) para obter detalhes sobre o nosso código de conduta e o processo para nos enviar pedidos de solicitação.
-
-
 ## ✒️ Autores
-
-Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
 
 * **henrique-esilva** - *Trabalho Inicial* - [henrique-esilva](https://github.com/henrique-esilva)
 * **Fulano De Tal** - *Documentação* - [fulanodetal](https://github.com/linkParaPerfil)
@@ -157,13 +135,11 @@ Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
 
 Este projeto está sob a licença (sua licença) - veja o arquivo [LICENSE.md](https://github.com/usuario/projeto/licenca) para detalhes.
 
-## 🎁 Expressões de gratidão
+## 🎁 Meus agradecimentos a:
 
-* Conte a outras pessoas sobre este projeto 📢;
-* Convide alguém da equipe para uma cerveja 🍺;
-* Um agradecimento publicamente 🫂;
-* etc.
-
+* Drielli, que me ensinou a usar o codespace do GitHub
+* Isabele e Bea, pela ideia de buscar um template para o README
+* A comunidade Python, pelo conteúdo e ferramentas grátis
 
 ---
 ⌨️ com ❤️ por [Armstrong Lohãns](https://gist.github.com/lohhans) 😊
