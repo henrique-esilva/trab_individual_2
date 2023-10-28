@@ -114,7 +114,7 @@ str_to_dict(arg: str)
 
 ## Usando na prática
 
-Para filtrar um conjunto de candidatos, armazene os canidatos em um dicionário. Este dicionário deve estar no formato {candidato: notas}, onde 'candidato' é um identificador qualquer, podendo ser uma string de texto, um inteiro, desde que não hajam identificadores duplicados. 'notas' deve ser uma string no formato padrão citado anteriormente [aqui](/henrique-esilva/trab_individual_2/README.md#padrão-das-notas).
+Para filtrar um conjunto de candidatos, armazene os canidatos em um dicionário. Este dicionário deve estar no formato {candidato: notas}, onde 'candidato' é um identificador qualquer, podendo ser uma string de texto, um inteiro, desde que não hajam identificadores duplicados. 'notas' deve ser uma string no formato padrão citado anteriormente [aqui](/README.md#padrão-das-notas).
 Use a função filtrar_por_notas() que está no módulo `main.py` fornecendo como argumentos:
 * uma lista ou tupla contendo as notas de corte; e
 * o dicionário onde estão armazenados os candidatos e suas notas.
