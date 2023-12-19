@@ -160,9 +160,11 @@ Este projeto está sob a licença (sua licença) - veja o arquivo [LICENSE.md](h
 Meus colegas do curso:
 * Drielli, que me ensinou a usar o codespace do GitHub
 * Isabele e Bea, pela ideia de buscar um template para o README
+
 Meus professores:
 * Douglas, sempre muito solícito
 * Diogo Guimarães, uma rocha de paciência e saber, mestre e amigo
+
 E também a:
 * A comunidade Python, pelo conteúdo e ferramentas grátis
 * A equipe da Resília e do Senac pela oportunidade de estudar Análise de Dados <3
